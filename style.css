@@ -1,20 +1,18 @@
+/* استيراد الخطوط من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap');
+
 /* تنسيق عام */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Amiri', serif; /* استخدام خط عربي جميل */
+    background-color: #f0e6d2; /* لون خلفية دافئ تراثي */
+    color: #333; /* لون النص الأساسي */
     margin: 0;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 /* رأس الموقع */
 header {
-    background-color: #d4af37;
+    background-color: #d4af37; /* لون ذهبي تراثي */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -22,6 +20,8 @@ header {
 
 header h1 {
     margin: 0;
+    font-family: 'Cairo', sans-serif; /* خط عصري للعناوين */
+    font-size: 36px;
 }
 
 /* التنقل */
@@ -29,6 +29,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 20px 0 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -40,6 +41,12 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-family: 'Cairo', sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4af37; /* عند التمرير يظهر اللون الذهبي */
 }
 
 /* أقسام المحتوى */
@@ -47,23 +54,44 @@ main {
     padding: 40px 0;
 }
 
+/* القسم الترحيبي */
 .hero {
     background: url('your-image-path.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 60px 0;
+    font-size: 24px;
 }
 
+/* عرض القصائد */
 .poem-preview, .poem-list, .about, .contact {
     margin-bottom: 40px;
+    text-align: center;
 }
 
+/* بطاقات القصائد */
 .poem-card {
     background-color: white;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Amiri', serif;
+}
+
+.poem-card h3 {
+    color: #d4af37; /* ذهبي لعناوين القصائد */
+}
+
+/* روابط إضافية */
+a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #333; /* التغيير عند التمرير */
 }
 
 /* تذييل الموقع */
@@ -75,4 +103,28 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* الصفحة عن الموقع */
+.about {
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    text-align: center;
+    padding: 40px;
+}
+
+/* تصحيح المسافات */
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
